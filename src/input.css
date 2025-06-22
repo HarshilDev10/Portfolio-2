@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'RoughSplash';
+    src: url('./assets/fonts/RoughSplash.ttf') format('truetype');
+  }

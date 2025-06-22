@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="./src/output.css">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    </head>
+    <body class="font-[mangiola]">
+        <header class="bg-white">
+            <nav id=home class="flex flex-col md:flex-row justify-between items-center px-4 py-6 text-black w-full">
+              <div class="flex justify-between w-full md:w-auto items-center">
+                <h3 class="font-bold text-xl md:text-2xl tracking-widest">HARSHIL PATEL</h3>
+                <button class="text-2xl md:hidden" onclick="toggleMenu()">
+                  <i class="fas fa-bars"></i>
+                </button>
+              </div>          
+              <ul id="mobile-menu" class="hidden md:flex flex-col md:flex-row mt-4 md:mt-0 space-y-4 md:space-y-0 md:space-x-6 lg:space-x-10 text-center font-bold tracking-wider w-full md:w-auto">
+                <li><a href="#home" class="hover:text-gray-600 cursor-pointer">Home</a></li>
+                <li><a href="#about" class="hover:text-gray-600 cursor-pointer">About</a></li>
+                <li><a href="#skills" class="hover:text-gray-600 cursor-pointer">Skills</a></li>
+                <li><a href="#experience" class="hover:text-gray-600 cursor-pointer">Experience</a></li>
+              </ul>
+            </nav>          
+            <div class="px-4 py-8 md:py-14 flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-8 lg:space-x-16 text-black">
+                <div class="border-4 shadow-2xl w-40 h-52 md:w-48 md:h-64 lg:w-80 lg:h-[34rem] 
+                rounded-full overflow-hidden mx-auto md:mx-0 
+                shadow-2xl hover:rotate-0 hover:scale-105 transition-all duration-500 ease-in-out bg-gradient-to-tr from-gray-200 to-white">
+      <img src="./assets/harshil.png" 
+           alt="image" 
+           class="w-full h-full object-cover rounded-full shadow-inner" />
+    </div>
+         
+              <div class="w-full md:w-1/2 lg:w-[55%] text-center md:text-left mt-4 md:mt-10">
+                <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[100px] font-extrabold tracking-wide font-[mangiola] leading-tight">
+                  Harshil Patel
+                </h2>
+                <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-[40px] font-bold mt-2 tracking-wider leading-none">
+                  Web Developer
+                </h3>
+                <p class="my-4 md:my-6 text-sm sm:text-base md:text-lg font-[poppins] text-justify md:text-left">
+                  I am a passionate and detail-oriented Web Developer with a strong foundation in HTML, CSS, JavaScript, PHP, and SQL. I specialize in creating responsive, user-friendly websites and dynamic web applications. With a focus on clean code and modern design, I strive to deliver high-performance solutions that meet client needs and industry standards. I am always eager to learn and stay updated with the latest web technologies.
+                </p>          
+                <div class="my-4 md:my-6 flex justify-center md:justify-start space-x-4">
+                  <a href="https://www.linkedin.com/in/harshil-patel-2b31a7269/">
+                    <i class="fab fa-linkedin text-blue-600 text-2xl md:text-3xl hover:scale-110 transition"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fab fa-twitter text-sky-500 text-2xl md:text-3xl hover:scale-110 transition"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fab fa-instagram text-pink-500 text-2xl md:text-3xl hover:scale-110 transition"></i>
+                  </a>
+                  <a href="https://github.com/HarshilDev10/Portfolio">
+                    <i class="fab fa-github text-black text-2xl md:text-3xl hover:scale-110 transition"></i>
+                  </a>
+                </div>          
+                <div class="flex flex-col sm:flex-row justify-center md:justify-start space-y-3 sm:space-y-0 sm:space-x-4 mt-4">
+                  <a href="./assets/resume.pdf" class="px-4 py-2 sm:p-3 border-2 rounded-full text-center tracking-wider text-black hover:bg-black hover:text-white transition">
+                    Download CV
+                  </a>
+                  <a href="#contact" class="px-4 py-2 sm:p-3 border-2 rounded-full text-center tracking-wider text-black hover:bg-black hover:text-white transition">
+                    Contact Me
+                  </a>
+                </div>
+              </div>
+            </div>
+          </header>
+          
+        
+
+        <!--Main Section-->
+        <!--Section 2-->
+        <main class="px-4 md:px-8">
+            <section class="py-8 md:py-12">
+                <h2 class="text-3xl md:text-4xl font-extrabold tracking-wide text-black text-center mb-10">
+                    Education Journey
+                </h2>
+                <div class="flex flex-col gap-10">
+                    <div class="flex flex-col md:flex-row items-center md:items-start gap-4">
+                        <div class="flex items-center md:justify-end md:w-1/4 w-full md:pr-4 md:py-12">
+                            <span class="font-bold text-black text-center md:text-right w-full md:w-auto pr-4">2019 - 2020</span>
+                            <img src="./assets/bullseye.svg" class="w-5 h-5 hidden md:block" />
+                        </div>
+                        <div class="md:w-3/4 w-full">
+                            <div class="border-2 rounded-lg p-4 md:p-5">
+                                <h2 class="font-extrabold text-lg md:text-2xl">Laxmi International School - Sarigam, Gujarat</h2>
+                                <h3 class="mt-2 font-[poppins]">- Higher Secondary ( Class 10<sup>th</sup> )</h3>
+                                <p class="font-[poppins]">- Percentage - 80%</p>
+                            </div>
+                        </div>
+                    </div>        
+                    <div class="flex flex-col md:flex-row items-center md:items-start gap-4">
+                        <div class="flex items-center md:justify-end md:w-1/4 w-full md:pr-4 md:py-12" >
+                            <span class="font-bold text-black text-center md:text-right w-full md:w-auto pr-4">2020 - 2022</span>
+                            <img src="./assets/bullseye.svg" class="w-5 h-5 hidden md:block" />
+                        </div>
+                        <div class="md:w-3/4 w-full">
+                            <div class="border-2 rounded-lg p-4 md:p-5">
+                                <h2 class="font-extrabold text-lg md:text-2xl">Laxmi International School - Sarigam, Gujarat</h2>
+                                <h3 class="mt-2 font-[poppins]">- Senior Secondary ( Class 12<sup>th</sup> )</h3>
+                                <p class="font-[poppins]">- Percentage - 63%</p>
+                            </div>
+                        </div>
+                    </div>        
+                    <div class="flex flex-col md:flex-row items-center md:items-start gap-4">
+                        <div class="flex items-center md:justify-end md:w-1/4 w-full md:pr-4 md:py-12">
+                            <span class="font-bold text-black text-center md:text-right w-full md:w-auto pr-4">2022 - 2026</span>
+                            <img src="./assets/bullseye.svg" class="w-5 h-5 hidden md:block" />
+                        </div>
+                        <div class="md:w-3/4 w-full">
+                            <div class="border-2 rounded-lg p-4 md:p-5">
+                                <h2 class="font-extrabold text-lg md:text-2xl">Uka Tarsadia University - Bardoli, Gujarat</h2>
+                                <h3 class="mt-2 font-[poppins]">- B.Tech in Computer Science and Engineering</h3>
+                                <p class="font-[poppins]">- CGPA - 8.14</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>        
+
+            <!--Section 3-->
+            <section id=skills class="py-8 md:py-12 px-4 md:px-8">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-10">My Skills</h2>
+            
+                <div class="flex flex-col md:flex-row justify-center gap-8 font-[poppins]">
+                    <div class="p-6 border-2 rounded-lg w-full md:w-1/2">
+                        <h2 class="text-center font-bold text-xl md:text-2xl rounded-lg mb-6 p-2 border-2 bg-black text-white">
+                            Front-end Development
+                        </h2>
+                        <div class="space-y-4 font-[poppins]">
+                            <p class="flex items-center text-sm md:text-base">
+                                <img src="./assets/html.svg" class="h-5 w-5 md:h-6 md:w-6 mr-3" />
+                                HTML (Hyper Text Markup Language)
+                            </p>
+                            <p class="flex items-center text-sm md:text-base">
+                                <img src="./assets/css.svg" class="h-5 w-5 md:h-6 md:w-6 mr-3" />
+                                CSS (Cascading Style Sheets)
+                            </p>
+                            <p class="flex items-center text-sm md:text-base">
+                                <img src="./assets/javascript.svg" class="h-5 w-5 md:h-6 md:w-6 mr-3" />
+                                JavaScript (JS)
+                            </p>
+                            <p class="flex items-center text-sm md:text-base">
+                                <img src="./assets/tailwind-css.svg" class="h-5 w-5 md:h-6 md:w-6 mr-3" />
+                                Tailwind CSS
+                            </p>
+                            <p class="flex items-center text-sm md:text-base">
+                                <img src="./assets/bootstrap.svg" class="h-5 w-5 md:h-6 md:w-6 mr-3" />
+                                Bootstrap
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 border-2 rounded-lg w-full md:w-1/2">
+                        <h2 class="text-center font-bold text-xl md:text-2xl rounded-lg mb-6 p-2 border-2 bg-black text-white">
+                            Back-end Development
+                        </h2>
+                        <div class="space-y-4 font-[poppins]">
+                            <p class="flex items-center text-sm md:text-base">
+                                <img src="./assets/php.svg" class="h-5 w-5 md:h-6 md:w-6 mr-3" />
+                                PHP (Hypertext Preprocessor)
+                            </p>
+                            <p class="flex items-center text-sm md:text-base">
+                                <img src="./assets/mysql.svg" class="h-5 w-5 md:h-6 md:w-6 mr-3" />
+                                MySQL (Structured Query Language)
+                            </p>
+                            <p class="flex items-center text-sm md:text-base">
+                                <img src="./assets/python.svg" class="h-5 w-5 md:h-6 md:w-6 mr-3" />
+                                Python Programming
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+
+            <!--Section 4-->
+            <section id=experience class="py-8 md:py-12 px-4 md:px-8">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-10 tracking-wide text-black">
+                  Experience
+                </h2> 
+                <div class="flex flex-col lg:flex-row justify-center gap-8">
+                  <div class="border-2 rounded-lg p-6 flex flex-col justify-between w-full lg:w-1/2">
+                    <div>
+                      <h2 class="text-xl md:text-2xl lg:text-3xl font-extrabold">
+                        Meshdroid Technologies (4 Months)
+                      </h2>
+                      <h3 class="mt-2 text-lg md:text-xl font-bold">Web Developer Intern</h3>
+                      <h4 class="italic mt-1">January 2024 - April 2024</h4>
+              
+                      <ul class="mt-4 space-y-2 text-sm md:text-base list-disc ml-4 font-[poppins]">
+                        <li>Developed a fully functional College Management System website using HTML, CSS, JavaScript, Bootstrap, PHP, and MySQL.</li>
+                        <li>Implemented student and teacher portals with secure login and role-based access.</li>
+                        <li>Enabled features like marks entry, evaluation, and student records management.</li>
+                      </ul>
+                    </div>
+              
+                    <div class="mt-6">
+                      <a href="./assets/meshdroid.pdf" class="inline-block px-4 py-2 border-2 rounded-full hover:bg-black hover:text-white transition">
+                        View Certificate
+                      </a>
+                    </div>
+                  </div>
+                  <div class="border-2 rounded-lg p-6 flex flex-col justify-between w-full lg:w-1/2">
+                    <div>
+                      <h2 class="text-xl md:text-2xl lg:text-3xl font-extrabold">
+                        Enjay IT Solutions (Present)
+                      </h2>
+                      <h3 class="mt-2 text-lg md:text-xl font-bold">Web Developer Intern</h3>
+                      <h4 class="italic mt-1">June 2025 - Present</h4>
+              
+                      <ul class="mt-4 space-y-2 text-sm md:text-base list-disc ml-4 font-[poppins]">
+                        <li>Developed a Flipkart Clone using HTML and CSS.</li>
+                        <li>Learned Tailwind CSS and Bootstrap.</li>
+                        <li>Developed a Portfolio Website using Tailwind CSS.</li>
+                      </ul>
+                    </div>
+              
+                    <div class="mt-6">
+                      <a href="#" class="inline-block px-4 py-2 border-2 rounded-full hover:bg-black hover:text-white transition">
+                        View Certificate
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              
+
+            <!--Section 5-->
+            <section class="py-8 md:py-12 px-4 md:px-8">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-10 text-black">
+                  My Projects
+                </h2>
+                <div class="flex flex-col md:flex-row justify-center gap-6 md:gap-8 lg:gap-10">
+                  <div class="border-2 rounded-lg p-4 flex flex-col max-w-md w-full">
+                    <img src="./assets/project1.png" alt="College Management System"
+                      class="h-48 md:h-56 w-full object-cover rounded">
+                    <a href="#"
+                      class="mt-4 text-center font-bold text-lg md:text-xl hover:text-gray-600 transition">
+                      College Management System
+                    </a>
+                  </div>              
+                  <div class="border-2 rounded-lg p-4 flex flex-col max-w-md w-full">
+                    <img src="./assets/project2.png" alt="Portfolio Website"
+                      class="h-48 md:h-56 w-full object-cover rounded">
+                    <a href="#"
+                      class="mt-4 text-center font-bold text-lg md:text-xl hover:text-gray-600 transition">
+                      Portfolio Website
+                    </a>
+                  </div>
+                </div>
+              </section>
+              <section id="about" class="my-30">
+                <div>
+                    <h3 class="text-[40px] font-bold text-center mb-8">About Me</h3>
+                    <div class="border-2 rounded-lg border-black shadow-2xl h-124 w-250 p-15 mx-auto">
+                        <div class="font-[poppins]">
+                            <div>Hello! I'm Harshil Patel, a final-year B.Tech Computer Science and Engineering student with a strong passion for web development and problem-solving. Over the past few years, I've honed my skills in HTML, CSS, JavaScript, PHP, MySQL, and Python, and used them to build responsive, user-friendly websites and dynamic web applications.</div><br>
+                            <div>I take pride in clean, efficient code and modern, intuitive design. Some of my key projects include a College Management System and a fully responsive Portfolio Website—both built with a mix of frontend and backend technologies. These projects have helped me gain hands-on experience in full-stack development, from crafting beautiful interfaces to managing robust databases.</div><br>
+                            <div>I've also worked as a Web Developer Intern at Meshdroid Technologies and Enjay IT Solutions, where I contributed to real-world applications, learned teamwork, and adapted to professional development environments. These internships helped me develop not just technical expertise, but also communication and collaboration skills.</div><br>
+                            <div>Beyond the screen, I’m passionate about football, cricket, and gaming. Whether it’s leading a project or a team on the field, I thrive in dynamic environments that challenge me to think creatively and improve continuously.</div><br>
+                            <div>I'm always eager to learn, grow, and contribute to exciting tech-driven solutions. Let’s build something amazing together!                            </div><br>
+                        </div>
+                    </div>
+                </div>
+              </section>              
+        </main>
+
+        <footer class="bg-black text-white py-8 md:py-12 px-4 md:px-8">
+            <div class="flex flex-col md:flex-row justify-between gap-8 md:gap-12">
+                <div class="text-center md:text-left">
+                    <h3 class="font-bold text-lg mb-4">Connect With Me</h3>
+                    <ul class="space-y-3">
+                        <li
+                            class="flex items-center justify-center md:justify-start gap-3">
+                            <a href="https://www.linkedin.com/in/harshil-patel-2b31a7269/"><img src="./assets/linkedin.png"
+                                    class="h-5 w-5 invert"></a>
+                            <a href="https://www.linkedin.com/in/harshil-patel-2b31a7269/" class="hover:text-gray-300">Linkedin</a>
+                        </li>
+                        <li
+                            class="flex items-center justify-center md:justify-start gap-3">
+                            <a href="https://www.instagram.com/harshil_1408?igsh=MXV2OHZsMDRqNXprOA=="><img src="./assets/instagram.png"
+                                    class="h-5 w-5 invert"></a>
+                            <a href="https://www.instagram.com/harshil_1408?igsh=MXV2OHZsMDRqNXprOA=="
+                                class="hover:text-gray-300">Instagram</a>
+                        </li>
+                        <li
+                            class="flex items-center justify-center md:justify-start gap-3">
+                            <a href="#"><img src="./assets/twitter.png"
+                                    class="h-5 w-5 invert"></a>
+                            <a href="#" class="hover:text-gray-300">Twitter</a>
+                        </li>
+                        <li
+                            class="flex items-center justify-center md:justify-start gap-3">
+                            <a href="https://github.com/HarshilDev10/Portfolio"><img src="./assets/github.png"
+                                    class="h-5 w-5 invert"></a>
+                            <a href="https://github.com/HarshilDev10/Portfolio" class="hover:text-gray-300">Github</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="text-center md:text-left">
+                    <h3 class="font-bold text-lg mb-4">Quick Links</h3>
+                    <ul class="space-y-3 ">
+                        <li><a href="#home"
+                                class="hover:text-gray-300">Home</a></li>
+                        <li><a href="#skills"
+                                class="hover:text-gray-300">Skills</a></li>
+                        <li><a href="#about"
+                                class="hover:text-gray-300">About</a></li>
+                        <li><a href="#experience"
+                                class="hover:text-gray-300">Details</a></li>
+                    </ul>
+                </div>
+                <div class="text-center md:text-left">
+                    <h3 class="font-bold text-lg mb-4">Contact Info</h3>
+                    <div id=contact class="space-y-3">
+                        <p><strong>Address: </strong>Kanadu (Dhodipada), Gujarat, India - 396105</p>
+                        <p><strong>Email:
+                            </strong>harshildeveloper10@gmail.com</p>
+                        <p><strong>Phone: </strong>+91 9913098634</p>
+                        <p><strong>Instagram: </strong>harshil_1408</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-8 pt-4 border-t border-gray-700">
+                <p>&copy; 2024 Harshil Patel. All rights reserved.</p>
+            </div>
+        </footer>
+        <script>
+            function toggleMenu() {
+              const menu = document.getElementById("mobile-menu");
+              menu.classList.toggle("hidden");
+            }
+          </script>
+    </body>
+</html>
