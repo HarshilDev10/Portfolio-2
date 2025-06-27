@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registered</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white flex justify-center items-center min-h-screen font-[poppins]">
+
+  <div class="bg-white text-black p-8 rounded-lg shadow-lg text-justify">
+    <p class="text-lg" id="output"></p>
+    <a href="form.html" class="border-2 mx-12 mt-10 p-2 h-2 w-10 rounded-lg items">Register Again</a>
+
+  </div>
+
+  <script>
+    const data = JSON.parse(localStorage.getItem("formData"));
+
+    if (data) {
+      document.getElementById("output").innerHTML = `
+        <strong>Name:</strong> ${data.name} <br>
+        <strong>Email:</strong> ${data.email} <br>
+        <strong>Phone:</strong> ${data.phone} <br>
+        <strong>Password:</strong> ${data.password}
+      `;
+    } else {
+      document.getElementById("output").innerText = "No form data found.";
+    }
+  </script>
+
+</body>
+</html>

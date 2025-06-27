@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="text-white font-[poppins] flex justify-center items-center min-h-screen">
+    <div class="border-0 md:h-[550px] md:w-[600px] mx-auto flex justify-center pt-10 bg-gradient-to-r from-[#0f172a]  to-[#334155] rounded-lg shadow-2xl">
+    <form id="form1" class="flex-cols items-start px-10">
+        <h1 class="font-[poppins] text-3xl text-center pb-10">Registration Form</h1>
+      <div class="text-[20px] p-2">
+        <label for="name" class="text-[20px]">Name : </label>
+        <input type="text" id="name" name="name" placeholder="Full Name" required class="px-2 h-10 md:w-[380px] rounded-lg text-black">
+    </div>
+      <div class="text-[20px] p-2">
+        <label for="email">Email : </label>
+        <input type="email" id="email" name="email" placeholder="Email ID" required class="px-2 h-10 md:w-[380px] rounded-lg text-black">
+    </div>
+    <div class="text-[20px] p-2">
+        <label for="phone">Phone : </label>
+        <input type="number" id="phone" name="phone" value="phone" placeholder="Phone No." required class="px-2 h-10 md:w-[280px] rounded-lg text-black">
+    </div>
+    <div class="text-[20px] p-2">
+        <label for="password">Create Password : </label>
+        <input type="password" id="password" name="password"  placeholder="Create Password" required class="px-2 h-10 md:w-[280px] rounded-lg text-black">
+    </div>
+    <div class="text-[20px] p-2">
+        <label for="cpassword">Confirm Password : </label>
+        <input type="password" id="cpassword" name="cpassword"  placeholder="Confirm Password" required class="px-2 h-10 md:w-[280px] rounded-lg text-black">
+    </div>
+    <div class="text-[20px] p-2">
+        <input type="checkbox" id="terms" name="terms" value="terms">
+        <label for="terms wrap"> I agree to all the terms and conditions mentioned above.</label>
+    </div>
+    <div class="text-[20px] p-2 text-center">
+      <button type="submit" value="submit" class="px-2 py-1 rounded-lg bg-white text-black ">Submit</button>
+    </div>
+    </form>
+  </div>
+  <script>
+    document.getElementById("form1").addEventListener("submit",function (e){
+        e.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const password = document.getElementById("password").value;
+        const cpassword = document.getElementById("cpassword").value;
+        const terms = document.getElementById("terms").checked;
+
+        if(name === ""){
+            alert("Enter Your Name!");
+            return;
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if(!emailRegex.test(email)){
+            alert("Invalid Email!")
+            return;
+        }
+
+        if (!/^\d{10}$/.test(phone)) {
+            alert("Invalid Phone Number!");
+            return;
+        }
+
+        if (password === "" || cpassword === "") {
+            alert("Please Enter Password!");
+            return;
+          }
+
+        if (password !== cpassword) {
+            alert("Passwords Do not Match!");
+            return;
+          }
+          
+        if (!terms) {
+            alert("Please Accept the Terms and Conditions to Proceed!");
+            return;
+          }
+
+        alert("Form submitted successfully!");  
+
+        localStorage.setItem("formData", JSON.stringify({ name, email, phone, password }));
+
+        window.location.href = "submit.html";
+    })
+  </script>
+</body>
+</html>

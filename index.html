@@ -1,19 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth overflow-x-hidden">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfolio</title>
         <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" href="./src/output.css">
+        <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
         <link
             href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
             rel="stylesheet">
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+            <style>
+              @keyframes fadeIn {
+                from {
+                  opacity: 0;
+                  transform: translateY(20px);
+                }
+                to {
+                  opacity: 1;
+                  transform: translateY(0);
+                }
+              }
+              
+              .animate-fade-in {
+                animation: fadeIn 2s ease-in-out forwards;
+              }
+            </style>
     </head>
     <body class="font-[mangiola]">
-        <header class="bg-white">
+        <header class="bg-white animate-fade-in">
             <nav id=home class="flex flex-col md:flex-row justify-between items-center px-4 py-6 text-black w-full">
               <div class="flex justify-between w-full md:w-auto items-center">
                 <h3 class="font-bold text-xl md:text-2xl tracking-widest">HARSHIL PATEL</h3>
@@ -82,40 +99,40 @@
                 <h2 class="text-3xl md:text-4xl font-extrabold tracking-wide text-black text-center mb-10">
                     Education Journey
                 </h2>
-                <div class="flex flex-col gap-10">
+                <div class="flex flex-col gap-10" data-aos="slide-right" data-aos-duration="1000">
                     <div class="flex flex-col md:flex-row items-center md:items-start gap-4">
                         <div class="flex items-center md:justify-end md:w-1/4 w-full md:pr-4 md:py-12">
                             <span class="font-bold text-black text-center md:text-right w-full md:w-auto pr-4">2019 - 2020</span>
                             <img src="./assets/bullseye.svg" class="w-5 h-5 hidden md:block" />
                         </div>
                         <div class="md:w-3/4 w-full">
-                            <div class="border-2 rounded-lg p-4 md:p-5">
+                            <div class="border-2 rounded-lg p-4 md:p-5" data-aos="slide-left" data-aos-duration="1000">
                                 <h2 class="font-extrabold text-lg md:text-2xl">Laxmi International School - Sarigam, Gujarat</h2>
                                 <h3 class="mt-2 font-[poppins]">- Higher Secondary ( Class 10<sup>th</sup> )</h3>
                                 <p class="font-[poppins]">- Percentage - 80%</p>
                             </div>
                         </div>
                     </div>        
-                    <div class="flex flex-col md:flex-row items-center md:items-start gap-4">
+                    <div class="flex flex-col md:flex-row items-center md:items-start gap-4" data-aos="slide-right" data-aos-duration="1000">
                         <div class="flex items-center md:justify-end md:w-1/4 w-full md:pr-4 md:py-12" >
                             <span class="font-bold text-black text-center md:text-right w-full md:w-auto pr-4">2020 - 2022</span>
                             <img src="./assets/bullseye.svg" class="w-5 h-5 hidden md:block" />
                         </div>
                         <div class="md:w-3/4 w-full">
-                            <div class="border-2 rounded-lg p-4 md:p-5">
+                            <div class="border-2 rounded-lg p-4 md:p-5" data-aos="slide-left" data-aos-duration="1000">
                                 <h2 class="font-extrabold text-lg md:text-2xl">Laxmi International School - Sarigam, Gujarat</h2>
                                 <h3 class="mt-2 font-[poppins]">- Senior Secondary ( Class 12<sup>th</sup> )</h3>
                                 <p class="font-[poppins]">- Percentage - 63%</p>
                             </div>
                         </div>
                     </div>        
-                    <div class="flex flex-col md:flex-row items-center md:items-start gap-4">
+                    <div class="flex flex-col md:flex-row items-center md:items-start gap-4" data-aos="slide-right" data-aos-duration="1000">
                         <div class="flex items-center md:justify-end md:w-1/4 w-full md:pr-4 md:py-12">
                             <span class="font-bold text-black text-center md:text-right w-full md:w-auto pr-4">2022 - 2026</span>
                             <img src="./assets/bullseye.svg" class="w-5 h-5 hidden md:block" />
                         </div>
                         <div class="md:w-3/4 w-full">
-                            <div class="border-2 rounded-lg p-4 md:p-5">
+                            <div class="border-2 rounded-lg p-4 md:p-5" data-aos="slide-left" data-aos-duration="1000">
                                 <h2 class="font-extrabold text-lg md:text-2xl">Uka Tarsadia University - Bardoli, Gujarat</h2>
                                 <h3 class="mt-2 font-[poppins]">- B.Tech in Computer Science and Engineering</h3>
                                 <p class="font-[poppins]">- CGPA - 8.14</p>
@@ -129,8 +146,8 @@
             <section id=skills class="py-8 md:py-12 px-4 md:px-8">
                 <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-10">My Skills</h2>
             
-                <div class="flex flex-col md:flex-row justify-center gap-8 font-[poppins]">
-                    <div class="p-6 border-2 rounded-lg w-full md:w-1/2">
+                <div class="flex flex-col md:flex-row justify-center gap-8 font-[poppins]" >
+                    <div  data-aos="slide-right" data-aos-duration="1000" class="p-6 border-2 rounded-lg w-full md:w-1/2" >
                         <h2 class="text-center font-bold text-xl md:text-2xl rounded-lg mb-6 p-2 border-2 bg-black text-white">
                             Front-end Development
                         </h2>
@@ -157,7 +174,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="p-6 border-2 rounded-lg w-full md:w-1/2">
+                    <div data-aos="slide-left" data-aos-duration="1000" class="p-6 border-2 rounded-lg w-full md:w-1/2">
                         <h2 class="text-center font-bold text-xl md:text-2xl rounded-lg mb-6 p-2 border-2 bg-black text-white">
                             Back-end Development
                         </h2>
@@ -186,7 +203,7 @@
                   Experience
                 </h2> 
                 <div class="flex flex-col lg:flex-row justify-center gap-8">
-                  <div class="border-2 rounded-lg p-6 flex flex-col justify-between w-full lg:w-1/2">
+                  <div class="border-2 rounded-lg p-6 flex flex-col justify-between w-full lg:w-1/2" data-aos="slide-right" data-aos-duration="1000">
                     <div>
                       <h2 class="text-xl md:text-2xl lg:text-3xl font-extrabold">
                         Meshdroid Technologies (4 Months)
@@ -207,7 +224,7 @@
                       </a>
                     </div>
                   </div>
-                  <div class="border-2 rounded-lg p-6 flex flex-col justify-between w-full lg:w-1/2">
+                  <div class="border-2 rounded-lg p-6 flex flex-col justify-between w-full lg:w-1/2" data-aos="slide-left" data-aos-duration="1000">
                     <div>
                       <h2 class="text-xl md:text-2xl lg:text-3xl font-extrabold">
                         Enjay IT Solutions (Present)
@@ -273,62 +290,7 @@
         </main>
 
         <footer class="bg-black text-white py-8 md:py-12 px-4 md:px-8">
-            <div class="flex flex-col md:flex-row justify-between gap-8 md:gap-12">
-                <div class="text-center md:text-left">
-                    <h3 class="font-bold text-lg mb-4">Connect With Me</h3>
-                    <ul class="space-y-3">
-                        <li
-                            class="flex items-center justify-center md:justify-start gap-3">
-                            <a href="https://www.linkedin.com/in/harshil-patel-2b31a7269/"><img src="./assets/linkedin.png"
-                                    class="h-5 w-5 invert"></a>
-                            <a href="https://www.linkedin.com/in/harshil-patel-2b31a7269/" class="hover:text-gray-300">Linkedin</a>
-                        </li>
-                        <li
-                            class="flex items-center justify-center md:justify-start gap-3">
-                            <a href="https://www.instagram.com/harshil_1408?igsh=MXV2OHZsMDRqNXprOA=="><img src="./assets/instagram.png"
-                                    class="h-5 w-5 invert"></a>
-                            <a href="https://www.instagram.com/harshil_1408?igsh=MXV2OHZsMDRqNXprOA=="
-                                class="hover:text-gray-300">Instagram</a>
-                        </li>
-                        <li
-                            class="flex items-center justify-center md:justify-start gap-3">
-                            <a href="#"><img src="./assets/twitter.png"
-                                    class="h-5 w-5 invert"></a>
-                            <a href="#" class="hover:text-gray-300">Twitter</a>
-                        </li>
-                        <li
-                            class="flex items-center justify-center md:justify-start gap-3">
-                            <a href="https://github.com/HarshilDev10/Portfolio"><img src="./assets/github.png"
-                                    class="h-5 w-5 invert"></a>
-                            <a href="https://github.com/HarshilDev10/Portfolio" class="hover:text-gray-300">Github</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="text-center md:text-left">
-                    <h3 class="font-bold text-lg mb-4">Quick Links</h3>
-                    <ul class="space-y-3 ">
-                        <li><a href="#home"
-                                class="hover:text-gray-300">Home</a></li>
-                        <li><a href="#skills"
-                                class="hover:text-gray-300">Skills</a></li>
-                        <li><a href="#about"
-                                class="hover:text-gray-300">About</a></li>
-                        <li><a href="#experience"
-                                class="hover:text-gray-300">Details</a></li>
-                    </ul>
-                </div>
-                <div class="text-center md:text-left">
-                    <h3 class="font-bold text-lg mb-4">Contact Info</h3>
-                    <div id=contact class="space-y-3">
-                        <p><strong>Address: </strong>Kanadu (Dhodipada), Gujarat, India - 396105</p>
-                        <p><strong>Email:
-                            </strong>harshildeveloper10@gmail.com</p>
-                        <p><strong>Phone: </strong>+91 9913098634</p>
-                        <p><strong>Instagram: </strong>harshil_1408</p>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-8 pt-4 border-t border-gray-700">
+            <div class="text-center  flex justify-center items-center">
                 <p>&copy; 2024 Harshil Patel. All rights reserved.</p>
             </div>
         </footer>
@@ -338,5 +300,9 @@
               menu.classList.toggle("hidden");
             }
           </script>
+          <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
     </body>
 </html>
