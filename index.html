@@ -1,308 +1,282 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth overflow-x-hidden">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portfolio</title>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="stylesheet" href="./src/output.css">
-        <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-        <link
-            href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
-            rel="stylesheet">
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-            <style>
-              @keyframes fadeIn {
-                from {
-                  opacity: 0;
-                  transform: translateY(20px);
-                }
-                to {
-                  opacity: 1;
-                  transform: translateY(0);
-                }
-              }
-              
-              .animate-fade-in {
-                animation: fadeIn 2s ease-in-out forwards;
-              }
-            </style>
-    </head>
-    <body class="font-[mangiola]">
-        <header class="bg-white animate-fade-in">
-            <nav id=home class="flex flex-col md:flex-row justify-between items-center px-4 py-6 text-black w-full">
-              <div class="flex justify-between w-full md:w-auto items-center">
-                <h3 class="font-bold text-xl md:text-2xl tracking-widest">HARSHIL PATEL</h3>
-                <button class="text-2xl md:hidden" onclick="toggleMenu()">
-                  <i class="fas fa-bars"></i>
-                </button>
-              </div>          
-              <ul id="mobile-menu" class="hidden md:flex flex-col md:flex-row mt-4 md:mt-0 space-y-4 md:space-y-0 md:space-x-6 lg:space-x-10 text-center font-bold tracking-wider w-full md:w-auto">
-                <li><a href="#home" class="hover:text-gray-600 cursor-pointer">Home</a></li>
-                <li><a href="#about" class="hover:text-gray-600 cursor-pointer">About</a></li>
-                <li><a href="#skills" class="hover:text-gray-600 cursor-pointer">Skills</a></li>
-                <li><a href="#experience" class="hover:text-gray-600 cursor-pointer">Experience</a></li>
-              </ul>
-            </nav>          
-            <div class="px-4 py-8 md:py-14 flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-8 lg:space-x-16 text-black">
-                <div class="border-4 shadow-2xl w-40 h-52 md:w-48 md:h-64 lg:w-80 lg:h-[34rem] 
-                rounded-full overflow-hidden mx-auto md:mx-0 
-                shadow-2xl hover:rotate-0 hover:scale-105 transition-all duration-500 ease-in-out bg-gradient-to-tr from-gray-200 to-white">
-      <img src="./assets/harshil.png" 
-           alt="image" 
-           class="w-full h-full object-cover rounded-full shadow-inner" />
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./src/output.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <style>
+      @keyframes spin-slow {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      .animate-spin-slow { animation: spin-slow 6s linear infinite; }
+      .transition-slow { transition: all 0.8s ease-in-out; }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in { animation: fadeIn 2s ease-in-out forwards; }
+
+      @keyframes fade-in-right {
+  0% { opacity: 0; transform: translateX(-20px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes fade-in-left {
+  0% { opacity: 0; transform: translateX(20px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+.animate-fade-in-right { animation: fade-in-right 1s forwards; }
+.animate-fade-in-left { animation: fade-in-left 1s forwards; }
+    </style>
+  </head>
+  <body class="font-[poppins] bg-gradient-to-br from-gray-50 to-gray-100 text-gray-900">
+<header class="bg-white/90 backdrop-blur-lg shadow-lg animate-fade-in min-h-[calc(100vh+100px)]">
+  <nav id="home" class="flex flex-col md:flex-row justify-between items-center px-6 py-6 w-full">
+    <div class="flex justify-between w-full md:w-auto items-center">
+      <h3 class="font-extrabold text-2xl md:text-3xl tracking-widest text-indigo-600">HARSHIL PATEL</h3>
+      <button class="text-2xl md:hidden text-indigo-600" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
     </div>
-         
-              <div class="w-full md:w-1/2 lg:w-[55%] text-center md:text-left mt-4 md:mt-10">
-                <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[100px] font-extrabold tracking-wide font-[mangiola] leading-tight">
-                  Harshil Patel
-                </h2>
-                <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-[40px] font-bold mt-2 tracking-wider leading-none">
-                  Web Developer
-                </h3>
-                <p class="my-4 md:my-6 text-sm sm:text-base md:text-lg font-[poppins] text-justify md:text-left">
-                  I am a passionate and detail-oriented Web Developer with a strong foundation in HTML, CSS, JavaScript, PHP, and SQL. I specialize in creating responsive, user-friendly websites and dynamic web applications. With a focus on clean code and modern design, I strive to deliver high-performance solutions that meet client needs and industry standards. I am always eager to learn and stay updated with the latest web technologies.
-                </p>          
-                <div class="my-4 md:my-6 flex justify-center md:justify-start space-x-4">
-                  <a href="https://www.linkedin.com/in/harshil-patel-2b31a7269/">
-                    <i class="fab fa-linkedin text-blue-600 text-2xl md:text-3xl hover:scale-110 transition"></i>
-                  </a>
-                  <a href="#">
-                    <i class="fab fa-twitter text-sky-500 text-2xl md:text-3xl hover:scale-110 transition"></i>
-                  </a>
-                  <a href="#">
-                    <i class="fab fa-instagram text-pink-500 text-2xl md:text-3xl hover:scale-110 transition"></i>
-                  </a>
-                  <a href="https://github.com/HarshilDev10/Portfolio">
-                    <i class="fab fa-github text-black text-2xl md:text-3xl hover:scale-110 transition"></i>
-                  </a>
-                </div>          
-                <div class="flex flex-col sm:flex-row justify-center md:justify-start space-y-3 sm:space-y-0 sm:space-x-4 mt-4">
-                  <a href="./assets/resume.pdf" class="px-4 py-2 sm:p-3 border-2 rounded-full text-center tracking-wider text-black hover:bg-black hover:text-white transition">
-                    Download CV
-                  </a>
-                  <a href="#contact" class="px-4 py-2 sm:p-3 border-2 rounded-full text-center tracking-wider text-black hover:bg-black hover:text-white transition">
-                    Contact Me
-                  </a>
-                </div>
-              </div>
-            </div>
-          </header>
-          
-        
+    <ul id="mobile-menu" class="hidden md:flex flex-col md:flex-row mt-4 md:mt-0 space-y-4 md:space-y-0 md:space-x-10 text-center font-semibold w-full md:w-auto">
+      <li><a href="#home" class="hover:text-indigo-500 transition">Home</a></li>
+      <li><a href="#about" class="hover:text-indigo-500 transition">About</a></li>
+      <li><a href="#skills" class="hover:text-indigo-500 transition">Skills</a></li>
+      <li><a href="#experience" class="hover:text-indigo-500 transition">Experience</a></li>
+    </ul>
+  </nav>
 
-        <!--Main Section-->
-        <!--Section 2-->
-        <main class="px-4 md:px-8">
-            <section class="py-8 md:py-12">
-                <h2 class="text-3xl md:text-4xl font-extrabold tracking-wide text-black text-center mb-10">
-                    Education Journey
-                </h2>
-                <div class="flex flex-col gap-10" data-aos="slide-right" data-aos-duration="1000">
-                    <div class="flex flex-col md:flex-row items-center md:items-start gap-4">
-                        <div class="flex items-center md:justify-end md:w-1/4 w-full md:pr-4 md:py-12">
-                            <span class="font-bold text-black text-center md:text-right w-full md:w-auto pr-4">2019 - 2020</span>
-                            <img src="./assets/bullseye.svg" class="w-5 h-5 hidden md:block" />
-                        </div>
-                        <div class="md:w-3/4 w-full">
-                            <div class="border-2 rounded-lg p-4 md:p-5" data-aos="slide-left" data-aos-duration="1000">
-                                <h2 class="font-extrabold text-lg md:text-2xl">Laxmi International School - Sarigam, Gujarat</h2>
-                                <h3 class="mt-2 font-[poppins]">- Higher Secondary ( Class 10<sup>th</sup> )</h3>
-                                <p class="font-[poppins]">- Percentage - 80%</p>
-                            </div>
-                        </div>
-                    </div>        
-                    <div class="flex flex-col md:flex-row items-center md:items-start gap-4" data-aos="slide-right" data-aos-duration="1000">
-                        <div class="flex items-center md:justify-end md:w-1/4 w-full md:pr-4 md:py-12" >
-                            <span class="font-bold text-black text-center md:text-right w-full md:w-auto pr-4">2020 - 2022</span>
-                            <img src="./assets/bullseye.svg" class="w-5 h-5 hidden md:block" />
-                        </div>
-                        <div class="md:w-3/4 w-full">
-                            <div class="border-2 rounded-lg p-4 md:p-5" data-aos="slide-left" data-aos-duration="1000">
-                                <h2 class="font-extrabold text-lg md:text-2xl">Laxmi International School - Sarigam, Gujarat</h2>
-                                <h3 class="mt-2 font-[poppins]">- Senior Secondary ( Class 12<sup>th</sup> )</h3>
-                                <p class="font-[poppins]">- Percentage - 63%</p>
-                            </div>
-                        </div>
-                    </div>        
-                    <div class="flex flex-col md:flex-row items-center md:items-start gap-4" data-aos="slide-right" data-aos-duration="1000">
-                        <div class="flex items-center md:justify-end md:w-1/4 w-full md:pr-4 md:py-12">
-                            <span class="font-bold text-black text-center md:text-right w-full md:w-auto pr-4">2022 - 2026</span>
-                            <img src="./assets/bullseye.svg" class="w-5 h-5 hidden md:block" />
-                        </div>
-                        <div class="md:w-3/4 w-full">
-                            <div class="border-2 rounded-lg p-4 md:p-5" data-aos="slide-left" data-aos-duration="1000">
-                                <h2 class="font-extrabold text-lg md:text-2xl">Uka Tarsadia University - Bardoli, Gujarat</h2>
-                                <h3 class="mt-2 font-[poppins]">- B.Tech in Computer Science and Engineering</h3>
-                                <p class="font-[poppins]">- CGPA - 8.14</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>        
+  <div class="px-6 py-10 md:py-16 flex flex-col md:flex-row items-center justify-center gap-10 text-gray-900">
+    <div class="relative w-44 h-44 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full">
+      <div class="absolute inset-0 rounded-full border-4 border-transparent border-t-purple-500 border-r-purple-400 animate-spin-slow shadow-xl"></div>
+      <div class="w-full h-full rounded-full overflow-hidden shadow-2xl">
+        <img src="./assets/harshil.png" alt="image" class="w-full h-full object-cover rounded-full"/>
+      </div>
+    </div>
 
-            <!--Section 3-->
-            <section id=skills class="py-8 md:py-12 px-4 md:px-8">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-10">My Skills</h2>
-            
-                <div class="flex flex-col md:flex-row justify-center gap-8 font-[poppins]" >
-                    <div  data-aos="slide-right" data-aos-duration="1000" class="p-6 border-2 rounded-lg w-full md:w-1/2" >
-                        <h2 class="text-center font-bold text-xl md:text-2xl rounded-lg mb-6 p-2 border-2 bg-black text-white">
-                            Front-end Development
-                        </h2>
-                        <div class="space-y-4 font-[poppins]">
-                            <p class="flex items-center text-sm md:text-base">
-                                <img src="./assets/html.svg" class="h-5 w-5 md:h-6 md:w-6 mr-3" />
-                                HTML (Hyper Text Markup Language)
-                            </p>
-                            <p class="flex items-center text-sm md:text-base">
-                                <img src="./assets/css.svg" class="h-5 w-5 md:h-6 md:w-6 mr-3" />
-                                CSS (Cascading Style Sheets)
-                            </p>
-                            <p class="flex items-center text-sm md:text-base">
-                                <img src="./assets/javascript.svg" class="h-5 w-5 md:h-6 md:w-6 mr-3" />
-                                JavaScript (JS)
-                            </p>
-                            <p class="flex items-center text-sm md:text-base">
-                                <img src="./assets/tailwind-css.svg" class="h-5 w-5 md:h-6 md:w-6 mr-3" />
-                                Tailwind CSS
-                            </p>
-                            <p class="flex items-center text-sm md:text-base">
-                                <img src="./assets/bootstrap.svg" class="h-5 w-5 md:h-6 md:w-6 mr-3" />
-                                Bootstrap
-                            </p>
-                        </div>
-                    </div>
-                    <div data-aos="slide-left" data-aos-duration="1000" class="p-6 border-2 rounded-lg w-full md:w-1/2">
-                        <h2 class="text-center font-bold text-xl md:text-2xl rounded-lg mb-6 p-2 border-2 bg-black text-white">
-                            Back-end Development
-                        </h2>
-                        <div class="space-y-4 font-[poppins]">
-                            <p class="flex items-center text-sm md:text-base">
-                                <img src="./assets/php.svg" class="h-5 w-5 md:h-6 md:w-6 mr-3" />
-                                PHP (Hypertext Preprocessor)
-                            </p>
-                            <p class="flex items-center text-sm md:text-base">
-                                <img src="./assets/mysql.svg" class="h-5 w-5 md:h-6 md:w-6 mr-3" />
-                                MySQL (Structured Query Language)
-                            </p>
-                            <p class="flex items-center text-sm md:text-base">
-                                <img src="./assets/python.svg" class="h-5 w-5 md:h-6 md:w-6 mr-3" />
-                                Python Programming
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
+    <div class="w-full md:w-1/2 lg:w-[55%] text-center md:text-left">
+      <h2 class="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-gray-900">Harshil Patel</h2>
+      <h3 class="text-2xl md:text-3xl lg:text-[40px] font-bold mt-3 text-indigo-600">Web Developer</h3>
+      <p class="my-6 text-base md:text-lg text-gray-700">I am a passionate and detail-oriented Web Developer with a strong foundation in HTML, CSS, JavaScript, PHP, and SQL. I specialize in creating responsive, user-friendly websites and dynamic web applications. With a focus on clean code and modern design, I strive to deliver high-performance solutions that meet client needs and industry standards.</p>
+      <div class="my-6 flex justify-center md:justify-start space-x-6 text-2xl">
+        <a href="https://www.linkedin.com/in/harshil-patel-2b31a7269/" class="text-blue-600 hover:scale-110 transition"><i class="fab fa-linkedin"></i></a>
+        <a href="#" class="text-sky-500 hover:scale-110 transition"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-pink-500 hover:scale-110 transition"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/HarshilDev10/Portfolio" class="text-gray-900 hover:scale-110 transition"><i class="fab fa-github"></i></a>
+      </div>
+      <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mt-4">
+        <a href="./assets/Harshil_Patel_Resume.pdf" class="px-6 py-3 border-2 border-indigo-600 rounded-full font-semibold text-indigo-600 hover:bg-indigo-600 hover:text-white transition">Download CV</a>
+        <a href="#contact" class="px-6 py-3 border-2 border-indigo-600 rounded-full font-semibold text-indigo-600 hover:bg-indigo-600 hover:text-white transition">Contact Me</a>
+      </div>
+    </div>
+  </div>
+</header>
 
-            <!--Section 4-->
-            <section id=experience class="py-8 md:py-12 px-4 md:px-8">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-10 tracking-wide text-black">
-                  Experience
-                </h2> 
-                <div class="flex flex-col lg:flex-row justify-center gap-8">
-                  <div class="border-2 rounded-lg p-6 flex flex-col justify-between w-full lg:w-1/2" data-aos="slide-right" data-aos-duration="1000">
-                    <div>
-                      <h2 class="text-xl md:text-2xl lg:text-3xl font-extrabold">
-                        Meshdroid Technologies (4 Months)
-                      </h2>
-                      <h3 class="mt-2 text-lg md:text-xl font-bold">Web Developer Intern</h3>
-                      <h4 class="italic mt-1">January 2024 - April 2024</h4>
-              
-                      <ul class="mt-4 space-y-2 text-sm md:text-base list-disc ml-4 font-[poppins]">
-                        <li>Developed a fully functional College Management System website using HTML, CSS, JavaScript, Bootstrap, PHP, and MySQL.</li>
-                        <li>Implemented student and teacher portals with secure login and role-based access.</li>
-                        <li>Enabled features like marks entry, evaluation, and student records management.</li>
-                      </ul>
-                    </div>
-              
-                    <div class="mt-6">
-                      <a href="./assets/meshdroid.pdf" class="inline-block px-4 py-2 border-2 rounded-full hover:bg-black hover:text-white transition">
-                        View Certificate
-                      </a>
-                    </div>
-                  </div>
-                  <div class="border-2 rounded-lg p-6 flex flex-col justify-between w-full lg:w-1/2" data-aos="slide-left" data-aos-duration="1000">
-                    <div>
-                      <h2 class="text-xl md:text-2xl lg:text-3xl font-extrabold">
-                        Enjay IT Solutions (Present)
-                      </h2>
-                      <h3 class="mt-2 text-lg md:text-xl font-bold">Web Developer Intern</h3>
-                      <h4 class="italic mt-1">June 2025 - Present</h4>
-              
-                      <ul class="mt-4 space-y-2 text-sm md:text-base list-disc ml-4 font-[poppins]">
-                        <li>Developed a Flipkart Clone using HTML and CSS.</li>
-                        <li>Learned Tailwind CSS and Bootstrap.</li>
-                        <li>Developed a Portfolio Website using Tailwind CSS.</li>
-                      </ul>
-                    </div>
-              
-                    <div class="mt-6">
-                      <a href="#" class="inline-block px-4 py-2 border-2 rounded-full hover:bg-black hover:text-white transition">
-                        View Certificate
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              
+<main class="px-6 md:px-12 space-y-32">
 
-            <!--Section 5-->
-            <section class="py-8 md:py-12 px-4 md:px-8">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-10 text-black">
-                  My Projects
-                </h2>
-                <div class="flex flex-col md:flex-row justify-center gap-6 md:gap-8 lg:gap-10">
-                  <div class="border-2 rounded-lg p-4 flex flex-col max-w-md w-full">
-                    <img src="./assets/project1.png" alt="College Management System"
-                      class="h-48 md:h-56 w-full object-cover rounded">
-                    <a href="https://meshdroid.com/Mtcollege/home.php"
-                      class="mt-4 text-center font-bold text-lg md:text-xl hover:text-gray-600 transition">
-                      College Management System
-                    </a>
-                  </div>              
-                  <div class="border-2 rounded-lg p-4 flex flex-col max-w-md w-full">
-                    <img src="./assets/project2.png" alt="Portfolio Website"
-                      class="h-48 md:h-56 w-full object-cover rounded">
-                    <a href="https://harshil-portfolio-2.netlify.app/"
-                      class="mt-4 text-center font-bold text-lg md:text-xl hover:text-gray-600 transition">
-                      Portfolio Website
-                    </a>
-                  </div>
-                </div>
-              </section>
-              <section id="about" class="my-30">
-                <div>
-                    <h3 class="text-[40px] font-bold text-center mb-8">About Me</h3>
-                    <div class="border-2 rounded-lg border-black shadow-2xl h-124 w-250 p-15 mx-auto">
-                        <div class="font-[poppins]">
-                            <div>Hello! I'm Harshil Patel, a final-year B.Tech Computer Science and Engineering student with a strong passion for web development and problem-solving. Over the past few years, I've honed my skills in HTML, CSS, JavaScript, PHP, MySQL, and Python, and used them to build responsive, user-friendly websites and dynamic web applications.</div><br>
-                            <div>I take pride in clean, efficient code and modern, intuitive design. Some of my key projects include a College Management System and a fully responsive Portfolio Website—both built with a mix of frontend and backend technologies. These projects have helped me gain hands-on experience in full-stack development, from crafting beautiful interfaces to managing robust databases.</div><br>
-                            <div>I've also worked as a Web Developer Intern at Meshdroid Technologies and Enjay IT Solutions, where I contributed to real-world applications, learned teamwork, and adapted to professional development environments. These internships helped me develop not just technical expertise, but also communication and collaboration skills.</div><br>
-                            <div>Beyond the screen, I’m passionate about football, cricket, and gaming. Whether it’s leading a project or a team on the field, I thrive in dynamic environments that challenge me to think creatively and improve continuously.</div><br>
-                            <div>I'm always eager to learn, grow, and contribute to exciting tech-driven solutions. Let’s build something amazing together!                            </div><br>
-                        </div>
-                    </div>
-                </div>
-              </section>              
-        </main>
+<section class="py-20 min-h-[80vh]" data-aos="fade-up" data-aos-duration="1200">
+  <h2 class="text-4xl font-extrabold text-center mb-12 text-indigo-600">
+    Education Journey
+  </h2>
 
-        <footer class="bg-black text-white py-8 md:py-12 px-4 md:px-8">
-            <div class="text-center  flex justify-center items-center">
-                <p>&copy; 2024 Harshil Patel. All rights reserved.</p>
-            </div>
-        </footer>
-        <script>
-            function toggleMenu() {
-              const menu = document.getElementById("mobile-menu");
-              menu.classList.toggle("hidden");
-            }
-          </script>
-          <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
-    </body>
+  <div class="flex flex-col gap-10">
+
+    <!-- Card 1 -->
+    <div class="flex flex-col md:flex-row items-center gap-6" data-aos="fade-up" data-aos-delay="100">
+      <span class="font-bold text-indigo-600 md:w-1/4 text-center md:text-right">
+        2019 - 2020
+      </span>
+      <div
+        class="group border-2 rounded-xl p-6 bg-white shadow-lg md:w-3/4 transition-all duration-700 ease-out transform hover:scale-105 hover:rotate-1 hover:shadow-2xl hover:border-indigo-400 hover:bg-indigo-50">
+        <h2 class="text-2xl font-bold transition duration-500 group-hover:text-indigo-600">
+          Laxmi International School - Sarigam
+        </h2>
+        <p class="text-gray-700 mt-2 transition duration-500 group-hover:text-indigo-500">
+          Higher Secondary (Class 10th) — Percentage: 80%
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="flex flex-col md:flex-row items-center gap-6" data-aos="fade-up" data-aos-delay="200">
+      <span class="font-bold text-indigo-600 md:w-1/4 text-center md:text-right">
+        2020 - 2022
+      </span>
+      <div
+        class="group border-2 rounded-xl p-6 bg-white shadow-lg md:w-3/4 transition-all duration-700 ease-out transform hover:scale-105 hover:-rotate-1 hover:shadow-2xl hover:border-indigo-400 hover:bg-indigo-50">
+        <h2 class="text-2xl font-bold transition duration-500 group-hover:text-indigo-600">
+          Laxmi International School - Sarigam
+        </h2>
+        <p class="text-gray-700 mt-2 transition duration-500 group-hover:text-indigo-500">
+          Senior Secondary (Class 12th) — Percentage: 63%
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="flex flex-col md:flex-row items-center gap-6" data-aos="fade-up" data-aos-delay="300">
+      <span class="font-bold text-indigo-600 md:w-1/4 text-center md:text-right">
+        2022 - 2026
+      </span>
+      <div
+        class="group border-2 rounded-xl p-6 bg-white shadow-lg md:w-3/4 transition-all duration-700 ease-out transform hover:scale-105 hover:rotate-1 hover:shadow-2xl hover:border-indigo-400 hover:bg-indigo-50">
+        <h2 class="text-2xl font-bold transition duration-500 group-hover:text-indigo-600">
+          Uka Tarsadia University - Bardoli
+        </h2>
+        <p class="text-gray-700 mt-2 transition duration-500 group-hover:text-indigo-500">
+          B.Tech in Computer Science and Engineering — CGPA: 8.14
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Skills -->
+  <section id="skills" class="py-20 bg-gradient-to-br from-indigo-50 to-white rounded-xl min-h-[80vh]" data-aos="fade-up" data-aos-duration="1200">
+    <h2 class="text-4xl font-extrabold text-center mb-12 text-indigo-600">My Skills</h2>
+    <div class="flex flex-col md:flex-row justify-center gap-10">
+      
+      <!-- Frontend -->
+      <div class="p-8 border-2 rounded-xl bg-white shadow-xl w-full md:w-1/2 transition-transform duration-700 hover:scale-105 hover:shadow-2xl" data-aos="fade-right">
+        <h2 class="text-xl font-bold text-center bg-indigo-600 text-white rounded-lg py-3 mb-6">Front-End Development</h2>
+        <ul class="space-y-4 text-gray-700">
+          <li class="flex items-center gap-3 opacity-0 animate-fade-in-right delay-[200ms]"><img src="./assets/html.svg" class="w-6 h-6">HTML</li>
+          <li class="flex items-center gap-3 opacity-0 animate-fade-in-right delay-[400ms]"><img src="./assets/css.svg" class="w-6 h-6">CSS</li>
+          <li class="flex items-center gap-3 opacity-0 animate-fade-in-right delay-[600ms]"><img src="./assets/javascript.svg" class="w-6 h-6">JavaScript</li>
+          <li class="flex items-center gap-3 opacity-0 animate-fade-in-right delay-[800ms]"><img src="./assets/tailwind-css.svg" class="w-6 h-6">Tailwind CSS</li>
+          <li class="flex items-center gap-3 opacity-0 animate-fade-in-right delay-[1000ms]"><img src="./assets/bootstrap.svg" class="w-6 h-6">Bootstrap</li>
+          <li class="flex items-center gap-3 opacity-0 animate-fade-in-right delay-[1200ms]"><img src="./assets/react.png" class="w-6 h-6">React JS</li>
+        </ul>
+      </div>
+
+      <!-- Backend -->
+      <div class="p-8 border-2 rounded-xl bg-white shadow-xl w-full md:w-1/2 transition-transform duration-700 hover:scale-105 hover:shadow-2xl" data-aos="fade-left">
+        <h2 class="text-xl font-bold text-center bg-indigo-600 text-white rounded-lg py-3 mb-6">Back-End Development</h2>
+        <ul class="space-y-4 text-gray-700">
+          <li class="flex items-center gap-3 opacity-0 animate-fade-in-left delay-[200ms]"><img src="./assets/php.svg" class="w-6 h-6">PHP</li>
+          <li class="flex items-center gap-3 opacity-0 animate-fade-in-left delay-[400ms]"><img src="./assets/mysql.svg" class="w-6 h-6">MySQL</li>
+          <li class="flex items-center gap-3 opacity-0 animate-fade-in-left delay-[600ms]"><img src="./assets/python.svg" class="w-6 h-6">Python</li>
+          <li class="flex items-center gap-3 opacity-0 animate-fade-in-left delay-[800ms]"><img src="./assets/node.png" class="w-6 h-6">Node JS</li>
+          <li class="flex items-center gap-3 opacity-0 animate-fade-in-left delay-[1000ms]"><img src="./assets/express.png" class="w-6 h-6">Express JS</li>
+          <li class="flex items-center gap-3 opacity-0 animate-fade-in-left delay-[1200ms]"><img src="./assets/mongodb.webp" class="w-6 h-6">MongoDB</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="py-20 min-h-[80vh]" data-aos="fade-up" data-aos-duration="1200">
+    <h2 class="text-4xl font-extrabold text-center mb-12 text-indigo-600">Experience</h2>
+    <div class="flex flex-col lg:flex-row justify-center gap-10">
+      <div class="border-2 rounded-xl p-8 bg-white shadow-xl w-full lg:w-1/2 transition-transform duration-700 hover:scale-105 hover:shadow-2xl hover:border-indigo-400 hover:animate-pulse" data-aos="zoom-in-up" data-aos-delay="200">
+        <h2 class="text-2xl font-bold">Meshdroid Technologies (4 Months)</h2>
+        <h3 class="mt-2 text-xl font-semibold text-indigo-600">Web Developer Intern</h3>
+        <h4 class="italic mt-1 text-gray-600">Jan 2024 - Apr 2024</h4>
+        <ul class="mt-4 list-disc ml-6 space-y-2 text-gray-700">
+          <li class="transition duration-500 hover:translate-x-3">Developed a College Management System with HTML, CSS, JS, PHP, and MySQL</li>
+          <li class="transition duration-500 hover:translate-x-3">Created secure login portals for students and teachers</li>
+          <li class="transition duration-500 hover:translate-x-3">Implemented marks entry and student records management</li>
+        </ul>
+        <a href="./assets/meshdroid.pdf" class="inline-block mt-6 px-6 py-2 border-2 border-indigo-600 rounded-full font-semibold text-indigo-600 hover:bg-indigo-600 hover:text-white transition duration-500 transform hover:scale-110">View Certificate</a>
+      </div>
+    </div>
+  </section>
+
+
+
+      <section class="py-20 bg-gradient-to-br from-indigo-50 to-white rounded-xl min-h-[80vh]" data-aos="fade-up">
+        <h2 class="text-4xl font-extrabold text-center mb-12 text-indigo-600">My Projects</h2>
+        <div class="grid md:grid-cols-3 gap-10">
+          <div class="border-2 rounded-xl p-4 bg-white shadow-lg hover:scale-105 transition" data-aos="zoom-in">
+            <img src="./assets/project1.png" alt="College Management System" class="h-52 w-full object-cover rounded-lg mb-4">
+            <a href="https://meshdroid.com/Mtcollege/home.php" target="_blank" class="block text-center font-bold text-lg text-indigo-600 hover:underline">College Management System</a>
+          </div>
+          <div class="border-2 rounded-xl p-4 bg-white shadow-lg hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="150">
+            <img src="./assets/project2.png" alt="Portfolio Website" class="h-52 w-full object-cover rounded-lg mb-4">
+            <a href="https://harshil-portfolio-2.netlify.app/" target="_blank" class="block text-center font-bold text-lg text-indigo-600 hover:underline">Portfolio Website</a>
+          </div>
+          <div class="border-2 rounded-xl p-4 bg-white shadow-lg hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="300">
+            <img src="./assets/project3.png" alt="E-Learning Website" class="h-52 w-full object-cover rounded-lg mb-4">
+            <a href="https://e-learning-one-sigma.vercel.app/" target="_blank" class="block text-center font-bold text-lg text-indigo-600 hover:underline">E-Learning Website</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="py-20 min-h-[80vh]" data-aos="fade-up">
+        <h2 class="text-4xl font-extrabold text-center mb-12 text-indigo-600">About Me</h2>
+        <div class="max-w-4xl mx-auto bg-white border-2 rounded-xl p-10 shadow-xl leading-relaxed text-gray-700 space-y-4">
+          <p>Hello! I'm Harshil Patel, a final-year B.Tech Computer Science and Engineering student with a strong passion for web development and problem-solving. Skilled in HTML, CSS, JS, PHP, MySQL, and Python, I build responsive, user-friendly websites and applications.</p>
+          <p>I take pride in clean, efficient code and intuitive design. My projects include a College Management System and a responsive Portfolio Website—showcasing both frontend and backend skills.</p>
+          <p>I have worked as a Web Developer Intern at Meshdroid Technologies and Enjay IT Solutions, gaining real-world experience and improving teamwork, communication, and adaptability.</p>
+          <p>Beyond coding, I enjoy football, cricket, and gaming. I thrive in environments that challenge me to think creatively and grow continuously.</p>
+          <p>I’m eager to learn, grow, and contribute to innovative solutions. Let’s build something amazing together!</p>
+        </div>
+      </section>
+      <section id="contact" class="bg-white py-16 px-6 lg:px-20">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    
+    <!-- Contact Form -->
+    <div class="bg-gray-50 p-8 rounded-2xl shadow-lg">
+      <h2 class="text-3xl font-bold text-gray-800 mb-6">Contact Me</h2>
+      <form class="space-y-5">
+        <div>
+          <label for="name" class="block text-sm font-semibold text-gray-700">Name</label>
+          <input type="text" id="name" placeholder="Your Name" class="w-full mt-2 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-semibold text-gray-700">Email</label>
+          <input type="email" id="email" placeholder="Your Email" class="w-full mt-2 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-semibold text-gray-700">Message</label>
+          <textarea id="message" rows="4" placeholder="Write your message here..." class="w-full mt-2 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"></textarea>
+        </div>
+        <button type="submit" class="w-full py-3 px-6 bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-all">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Contact Details -->
+    <div class="space-y-6">
+      <h2 class="text-3xl font-bold text-gray-800">Get in Touch</h2>
+      <p class="text-gray-600">Feel free to reach out for collaborations, opportunities, or just to say hello!</p>
+      <div class="space-y-4">
+        <div class="flex items-center gap-4">
+          <div class="p-3 bg-blue-100 text-indigo-600 rounded-full">
+                  <i class="fas fa-envelope"></i>
+          </div>
+          <span class="text-lg text-gray-700">harshildeveloper10@gmail.com</span>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="p-3 bg-blue-100 text-indigo-600 rounded-full">
+              <i class="fas fa-phone-alt"></i>
+          </div>
+          <span class="text-lg text-gray-700">+91 9913098634</span>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="p-3 bg-blue-100 text-indigo-600 rounded-full">
+                  <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <span class="text-lg text-gray-700">Vapi, Gujarat, India - 396105</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    </main>
+    <footer class="bg-indigo-600 text-white py-8 text-center">
+      <p>&copy; 2024 Harshil Patel. All rights reserved.</p>
+    </footer>
+    <script>
+      function toggleMenu() { document.getElementById("mobile-menu").classList.toggle("hidden"); }
+    </script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>AOS.init({duration:1000, once:true, easing:"ease-in-out"});</script>
+  </body>
 </html>
